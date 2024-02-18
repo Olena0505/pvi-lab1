@@ -3,12 +3,23 @@ body {
     margin: 0;
     padding: 0;
 }
+button{
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 87%);
+    padding-top: 3px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(0, 0%, 82%);
+}
+
+/* HEADER */
 
 header {
     background-color: hsl(0, 0%, 61%);
     color: white;
     width: 100%;
-    padding: 10px 0; 
+    padding: 7px 0; 
     display: flex; 
     justify-content: end; 
     align-items: center;
@@ -23,6 +34,8 @@ header h4 {
     margin-left: 20px;
     margin-right: auto;
 }
+
+/* MAIN */
 
 main h1{
     font-weight: lighter;
@@ -53,7 +66,6 @@ main {
     left: 0;
     overflow-x: hidden;
 }
-
 .navbar ul{
     list-style-type: none;
     padding: 15px;
@@ -67,9 +79,7 @@ main {
     display: block;
     text-align: center;
 }
-.navbar a.active{
-    font-weight: bold;
-}
+.navbar a.active,
 .navbar a:hover{
     font-weight: bold;
 }
@@ -95,6 +105,7 @@ th, td {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .pagination a {
     margin: 0 5px;
@@ -111,7 +122,7 @@ th, td {
     background-color: hsl(0, 0%, 61%);
 }
 .pagination a:hover:not(.active){
-    background-color: rgba(213, 213, 213, 0.952);
+    background-color: hsla(0, 0%, 84%, 0.952);
 }
 
 /* DROPDOWN MENU */
@@ -121,10 +132,11 @@ th, td {
 }
 .dropdown-container button{
     background-color: hsla(0, 0%, 0%, 0);
+    border-radius: 5px;
     color: white;
-    padding: 5px 15px;
+    padding-right: 20px;
+    margin-right: 10px;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -134,11 +146,13 @@ th, td {
     text-decoration: none;
     padding: 10px 15px;
 }
-.user-content, .notify-content{
+.user-content, 
+.notify-content{
     display: none;
+    border-radius: 5px;
     background-color: hsl(0, 0%, 95%);
     position: absolute;
-    min-width: 100px;
+    min-width: 130px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
 }
 .notify-dropdown:hover .notify-content, 
@@ -151,14 +165,21 @@ th, td {
 }
 .notify-dropdown a:hover, 
 .user-dropdown a:hover{
+    border-radius: 5px;
     background-color: hsl(0, 0%, 90%);
 }
 .notify-dropdown button{
-    height: 33px;
-    padding-right: 5px;
+    height: 42px;
+    padding-right: 7px;
+    padding-left: 17px;
+}
+#profilePicture{
+    width: 40px;
+    border-radius: 20px;
 }
 
 /* ANIMATION */
+
 .fa-regular.fa-bell.fa-xl{
     margin-right: 10px;
     animation-name: ringing;
@@ -173,17 +194,19 @@ th, td {
     100% {transform: rotateZ(0deg);}
 }
 
+/* STATUS DOTS FOR TABLE */
+
 .active-dot {
     height: 20px;
     width: 20px;
     background-color: hsl(144, 77%, 42%);
     border-radius: 50%;
     display: inline-block;
-  }
-  .inactive-dot {
+}
+.inactive-dot {
     height: 20px;
     width: 20px;
     background-color: hsl(0, 0%, 61%);
     border-radius: 50%;
     display: inline-block;
-  }
+}

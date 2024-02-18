@@ -14,33 +14,52 @@
     <header>
         <h4 id="cms">CMS</h4>
         
-        <div class="notify-dropdown">
-            <button>
-                <i class="fa-regular fa-bell fa-xl"></i>
-            </button>
-            <div class="content">
-                <a href="#">Profile</a>
-                <a href="#">Log out</a>
+        <div class="dropdown-container">
+            <div class="notify-dropdown">
+                <button>
+                    <i class="fa-regular fa-bell fa-xl"></i>
+                </button>
+                <div class="notify-content">
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i> 
+                        John: What`s up?
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        Ann: Hello!
+                    </a>
+                </div>
             </div>
+    
+            <div class="user-dropdown">
+                <button>
+                    <i class="fa-regular fa-circle-user fa-xl"></i>
+                    <h4>James Bond</h4>
+                </button>
+                <div class="user-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+    
         </div>
 
-        <div class="user-dropdown">
-            
-            <button>
-                <i class="fa-regular fa-circle-user fa-xl"></i>
-                <h4>James Bond</h4>
-            </button>
-            <div class="content">
-                <a href="#">Profile</a>
-                <a href="#">Log out</a>
-            </div>
-        </div>
 
     </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="students.html" class="active">Students</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+        </ul>
+    </nav>
 
     <main>
 
         <h1>Students</h1>
+
+        <button class="addBtn"><i class="fa-solid fa-plus"></i></button>
 
         <section class="table-container">
             <table>
@@ -98,12 +117,12 @@
         </section>
 
         <div class="pagination">
-            <a href="#"><</a>
+            <a href="#">&langle;</a>
             <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
-            <a href="#">></a>
+            <a href="#">&rangle;</a>
         </div>
         
     </main>

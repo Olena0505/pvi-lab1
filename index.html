@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d9209b8d96.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <h4 id="cms">CMS</h4>
+        
+        <div class="notify-dropdown">
+            <button>
+                <i class="fa-regular fa-bell fa-xl"></i>
+            </button>
+            <div class="content">
+                <a href="#">Profile</a>
+                <a href="#">Log out</a>
+            </div>
+        </div>
+
+        <div class="user-dropdown">
+            
+            <button>
+                <i class="fa-regular fa-circle-user fa-xl"></i>
+                <h4>James Bond</h4>
+            </button>
+            <div class="content">
+                <a href="#">Profile</a>
+                <a href="#">Log out</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <h1>Students</h1>
+
+        <section class="table-container">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="main"></th>
+                        <th>Group</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Birthday</th>
+                        <th>Stutus</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <td>KN-21</td>
+                        <td>John Smith</td>
+                        <td>M</td>
+                        <td>11.05.2004</td>
+                        <td><span class="inactive-dot"></span></td>
+                        <td>
+                            <button>
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-xmark fa-lg"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <td>KN-22</td>
+                        <td>Ann Bond</td>
+                        <td>F</td>
+                        <td>24.04.2004</td>
+                        <td><span class="active-dot"></span></td>
+                        <td>
+                            <button>
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-xmark fa-lg"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <div class="pagination">
+            <a href="#"><</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">></a>
+        </div>
+        
+    </main>
+    
+</body>
+</html>

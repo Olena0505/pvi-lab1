@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: hsl(0, 0%, 61%);
+    color: white;
+    width: 100%;
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: end; 
+    align-items: center;
+}
+header h4 {
+    margin: 0; 
+    margin-left: 5px;
+    font-size: 20px; 
+    font-weight: normal; 
+}
+#cms{
+    margin-right: auto;
+}
+
+main h1{
+    font-weight: lighter;
+}
+main {
+    padding: 20px;
+}
+
+/* TABLE */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid hsl(0, 0%, 87%);
+    text-align: center;
+    padding: 8px;
+}
+
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: 5px;
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+}
+.pagination a:hover {
+    background-color: hsl(0, 0%, 82%);
+}
+.pagination a.active{
+    background-color: hsl(0, 0%, 61%);
+}
+.pagination a:hover:not(.active){
+    background-color: rgba(213, 213, 213, 0.952);
+}
+
+/* DROPDOWN MENU */
+
+.notify-dropdown, .user-dropdown{
+    display: inline;
+}
+
+.user-dropdown button{
+    background-color: hsla(0, 0%, 0%, 0);
+    color: white;
+    padding:10px 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.notify-dropdown a, .user-dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.notify-dropdown .content, .user-dropdown .content{
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.824);
+}
+.notify-dropdown:hover .content, .user-dropdown:hover .content{
+    display: block;
+}
+.notify-dropdown:hover button, .user-dropdown:hover button{
+    background-color:  hsl(0, 0%, 70%);
+}
+.notify-dropdown a:hover, .user-dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+/* ANIMATION */
+.fa-regular.fa-bell.fa-xl{
+    margin-right: 10px;
+    animation-name: ringing;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+    animation-direction: normal;
+}
+@keyframes ringing{
+    0% {transform: rotateZ(0deg);}
+    25% {transform: rotateZ(30deg);}
+    75% {transform: rotateZ(-30deg);}
+    100% {transform: rotateZ(0deg);}
+}
+
+.active-dot {
+    height: 20px;
+    width: 20px;
+    background-color: hsl(144, 77%, 42%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .inactive-dot {
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }

@@ -38,7 +38,6 @@
                     "data-direction": +1
                 }).appendTo(nav),
                         {click: "pageStepHandler"});
-                
                 return nav;
             },
             _refreshNavBar: function() {

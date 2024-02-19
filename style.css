@@ -12,11 +12,6 @@ button{
 button:hover{
     background-color: hsl(0, 0%, 82%);
 }
-#wrapper {
-    min-width: 350px;
-    margin: 0 0px; /* Center the wrapper horizontally */
-    padding: 0 0px; /* Example padding */
-  }
 
 /* HEADER */
 
@@ -55,7 +50,6 @@ main {
     overflow-x: hidden;
 }
 #addBtn{
-    position:unset;
     align-self: flex-end;
     margin-bottom: 15px;
 }
@@ -96,6 +90,7 @@ main {
 /* TABLE */
 .table-container{
     overflow: auto;
+    position: relative;
 }
 #studentsTable {
     border-collapse: collapse;
@@ -113,7 +108,11 @@ th, td {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    position: fixed;
+    bottom: 0px;
+    right: calc(50vw - 140px);
+    z-index: 1000;
 }
 .paging-nav a {
     margin: 0 5px;
@@ -137,8 +136,6 @@ th, td {
 
 .dropdown-container{
     overflow: hidden;
-}
-.dropdown-container{
     display: flex;
 }
 .dropdown-container button{

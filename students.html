@@ -7,6 +7,7 @@
     <title>Students</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d9209b8d96.js" crossorigin="anonymous"></script>
+    <script type="module" src="index.js"></script>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
         <div class="dropdown-container">
 
             <div class="notify-dropdown">
-                <button>
-                    <i class="fa-regular fa-bell fa-xl"></i>
+                <button id="notificationBtn">
+                    <i class="fa-regular fa-bell fa-xl" id="bellIcon"></i>
                 </button>
                 <div class="notify-content">
                     <a href="#">
@@ -33,7 +34,7 @@
             </div>
     
             <div class="user-dropdown">
-                <button>
+                <button id="userBtn">
                     <img id="profilePicture" src="/images/James-Bond.jpg" alt="Profile picture">
                     <h4>James Bond</h4>
                 </button>
@@ -60,14 +61,14 @@
 
         <h1>Students</h1>
 
-        <button class="addBtn"><i class="fa-solid fa-plus"></i></button>
+        <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
 
         <section class="table-container">
-            <table>
+            <table id="studentsTable">
 
-                <thead>
+                <thead id="tableHead">
                     <tr>
-                        <th><input type="checkbox" id="mainCheckbox"></th>
+                        <th><input type="checkbox" id="selectAll"></th>
                         <th>Group</th>
                         <th>Name</th>
                         <th>Gender</th>
@@ -77,8 +78,8 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr>
+                <tbody id="tableBody">
+                    <tr class="tableRow">
                         <th><input type="checkbox"></th>
                         <td>KN-21</td>
                         <td>John Smith</td>
@@ -86,16 +87,16 @@
                         <td>11.05.2004</td>
                         <td><span class="inactive-dot"></span></td>
                         <td>
-                            <button>
+                            <button class="editRowBtn">
                                 <i class="fa-solid fa-pencil"></i>
                             </button>
-                            <button>
+                            <button class="deleteRowBtn"> 
                                 <i class="fa-solid fa-xmark fa-lg"></i>
                             </button>
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="tableRow">
                         <th><input type="checkbox"></th>
                         <td>KN-22</td>
                         <td>Ann Bond</td>
@@ -103,10 +104,10 @@
                         <td>24.04.2004</td>
                         <td><span class="active-dot"></span></td>
                         <td>
-                            <button>
+                            <button class="editRowBtn">
                                 <i class="fa-solid fa-pencil"></i>
                             </button>
-                            <button>
+                            <button class="deleteRowBtn">
                                 <i class="fa-solid fa-xmark fa-lg"></i>
                             </button>
                         </td>

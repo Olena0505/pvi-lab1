@@ -48,7 +48,7 @@ main {
     flex-direction: column;
     overflow-x: auto;
 }
-.addBtn{
+#addBtn{
     align-self: flex-end;
     margin-bottom: 15px;
 }
@@ -56,7 +56,6 @@ main {
 /* NAVIGATION BAR */
 
 .navbar{
-    background-color: white;
     margin-top: 63px;
     height: 100%; 
     width: 120px;
@@ -180,7 +179,7 @@ th, td {
 
 /* ANIMATION */
 
-.fa-regular.fa-bell.fa-xl{
+#bellIcon{
     margin-right: 10px;
     animation-name: ringing;
     animation-iteration-count: infinite;
@@ -189,8 +188,8 @@ th, td {
 }
 @keyframes ringing{
     0% {transform: rotateZ(0deg);}
-    25% {transform: rotateZ(30deg);}
-    75% {transform: rotateZ(-30deg);}
+    25% {transform: rotateZ(15deg);}
+    75% {transform: rotateZ(-15deg);}
     100% {transform: rotateZ(0deg);}
 }
 

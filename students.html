@@ -7,10 +7,14 @@
     <title>Students</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d9209b8d96.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="paging.js"></script>
     <script type="module" src="index.js"></script>
 </head>
 
 <body>
+    <div id="wrapper">
 
     <header>
         <h4 id="cms">CMS</h4>
@@ -22,11 +26,11 @@
                     <i class="fa-regular fa-bell fa-xl" id="bellIcon"></i>
                 </button>
                 <div class="notify-content">
-                    <a href="#">
+                    <a href="mailto: johnsmith@gmail.com">
                         <i class="fa-regular fa-user"></i> 
                         John: What`s up?
                     </a>
-                    <a href="#">
+                    <a href="mailto:annbond@gmail.com">
                         <i class="fa-regular fa-user"></i>
                         Ann: Hello!
                     </a>
@@ -46,7 +50,6 @@
     
         </div>
 
-
     </header>
 
     <nav class="navbar">
@@ -63,7 +66,7 @@
 
         <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
 
-        <section class="table-container">
+        <div class="table-container">
             <table id="studentsTable">
 
                 <thead id="tableHead">
@@ -113,21 +116,10 @@
                         </td>
                     </tr>
                 </tbody>
-
             </table>
-
-        </section>
-
-        <div class="pagination">
-            <a href="#">&langle;</a>
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">&rangle;</a>
         </div>
-        
     </main>
-    
+
+</div>
 </body>
 </html>

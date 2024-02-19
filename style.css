@@ -12,6 +12,11 @@ button{
 button:hover{
     background-color: hsl(0, 0%, 82%);
 }
+#wrapper {
+    min-width: 350px;
+    margin: 0 0px; /* Center the wrapper horizontally */
+    padding: 0 0px; /* Example padding */
+  }
 
 /* HEADER */
 
@@ -39,6 +44,7 @@ header h4 {
 
 main h1{
     font-weight: lighter;
+    margin-top: 15px;
     margin-bottom: 0px;
 }
 main {
@@ -46,9 +52,10 @@ main {
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 #addBtn{
+    position:unset;
     align-self: flex-end;
     margin-bottom: 15px;
 }
@@ -87,8 +94,10 @@ main {
 }
 
 /* TABLE */
-
-table {
+.table-container{
+    overflow: auto;
+}
+#studentsTable {
     border-collapse: collapse;
     width: 100%;
 }
@@ -99,14 +108,14 @@ th, td {
 }
 
 /* PAGINATION */
-
-.pagination {
+.paging-nav {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.pagination a {
+.paging-nav a {
     margin: 0 5px;
     padding: 5px 10px;
     border: 1px solid hsl(0, 0%, 87%);
@@ -114,18 +123,21 @@ th, td {
     text-decoration: none;
     color: hsl(0, 0%, 20%);
 }
-.pagination a:hover {
+.paging-nav a:hover {
     background-color: hsl(0, 0%, 82%);
 }
-.pagination a.active{
+.paging-nav a.selected-page{
     background-color: hsl(0, 0%, 61%);
 }
-.pagination a:hover:not(.active){
+.paging-nav a:hover:not(.selected-page){
     background-color: hsla(0, 0%, 84%, 0.952);
 }
 
 /* DROPDOWN MENU */
 
+.dropdown-container{
+    overflow: hidden;
+}
 .dropdown-container{
     display: flex;
 }

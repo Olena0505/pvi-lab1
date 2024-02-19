@@ -1,3 +1,14 @@
+$(document).ready(function(){
+    $('#studentsTable').paging({limit: 6});
+})
+
+const notifyBtn = document.getElementById('notificationBtn');
+const bellIcon = document.getElementById('bellIcon');
+
+notifyBtn.addEventListener('mouseover', event => {
+    bellIcon.style.animation = 'none';
+})
+
 document.getElementById('selectAll').addEventListener('change', function() {
     const checkboxes = document.querySelectorAll('#studentsTable tbody input[type="checkbox"]');
    
@@ -31,6 +42,8 @@ document.getElementById('addBtn').onclick = function(){
 
     const newDeleteButton = newRow.querySelector('.deleteRowBtn');
     addDeleteListener(newDeleteButton);
+    $('#studentsTable').paging('refresh');
+
 }
 
 let deleteButtons = document.querySelectorAll('.deleteRowBtn');
@@ -40,5 +53,6 @@ function addDeleteListener(button) {
     button.addEventListener('click', function() {
         const row = button.closest('tr');
         row.remove();
+        $('#studentsTable').paging('refresh');
     });
 }
